@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="المنظومة الإسلامية الرقمية الموحدة - تطبيق شامل للقرآن والحديث والفقه والتعلم والاقتصاد الإسلامي والعمل الإنساني"
+    />
+    <meta name="theme-color" content="#0b1321" />
+    <title>المنظومة الإسلامية الرقمية الموحدة</title>
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <div class="logo">☪</div>
+          <div>
+            <h1>زاد المسلم</h1>
+            <small>المنظومة الإسلامية الرقمية الموحدة</small>
+          </div>
+        </div>
+
+        <nav class="main-nav" aria-label="التنقل الرئيسي">
+          <button class="nav-btn active" data-target="home">الرئيسية</button>
+          <button class="nav-btn" data-target="quran">القرآن</button>
+          <button class="nav-btn" data-target="hadith">الحديث</button>
+          <button class="nav-btn" data-target="fiqh">الفقه</button>
+          <button class="nav-btn" data-target="stories">القصص</button>
+          <button class="nav-btn" data-target="lectures">المحاضرات</button>
+          <button class="nav-btn" data-target="library">المكتبة</button>
+        </nav>
+      </header>
+
+      <main class="container">
+        <section id="home" class="tab-section active">
+          <div class="hero panel">
+            <div>
+              <span class="kicker">بِسْمِ ٱللّٰهِ ٱلرَّحْمٰنِ ٱلرَّحِيمِ</span>
+              <h2>منظومة إسلامية شاملة تجمع المعرفة، التوثيق، والتعليم، والهوية الرقمية.</h2>
+              <p>
+                منصة موثقة ومصنفة ومُعدة للتوسع التدريجي، تجمع بين القرآن، الحديث، الفقه،
+                التفسير، قصص الأنبياء، التعليم، الأسرة، الاقتصاد الإسلامي، والعمل الإنساني.
+              </p>
+              <div class="cta-row">
+                <button class="primary-btn" data-target="quran">استكشف القرآن</button>
+                <button class="secondary-btn" data-target="lectures">محاضرات العلماء</button>
+              </div>
+            </div>
+
+            <div class="stats-card">
+              <div class="stat-item">
+                <strong id="stat-quran">114</strong>
+                <span>سورة</span>
+              </div>
+              <div class="stat-item">
+                <strong id="stat-hadith">0</strong>
+                <span>حديث</span>
+              </div>
+              <div class="stat-item">
+                <strong id="stat-modules">10+</strong>
+                <span>قِسم رئيسي</span>
+              </div>
+              <div class="stat-item">
+                <strong id="stat-sources">100%</strong>
+                <span>توثيق</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-cards" id="home-grid"></div>
+        </section>
+
+        <section id="quran" class="tab-section hidden">
+          <div class="panel toolbar-panel">
+            <div class="panel-head">
+              <h3>القرآن الكريم</h3>
+              <label class="search-box">
+                <input id="quran-search" type="search" placeholder="ابحث عن سورة..." aria-label="بحث في القرآن" />
+              </label>
+            </div>
+            <div id="quran-list" class="card-list"></div>
+          </div>
+        </section>
+
+        <section id="hadith" class="tab-section hidden">
+          <div class="panel toolbar-panel">
+            <div class="panel-head">
+              <h3>مكتبة الحديث الشريف</h3>
+            </div>
+            <div id="hadith-list" class="card-list"></div>
+          </div>
+        </section>
+
+        <section id="fiqh" class="tab-section hidden">
+          <div class="panel toolbar-panel">
+            <div class="panel-head">
+              <h3>الفقه والعلم الشرعي</h3>
+            </div>
+            <div id="fiqh-list" class="card-list"></div>
+          </div>
+        </section>
+
+        <section id="stories" class="tab-section hidden">
+          <div class="panel toolbar-panel">
+            <div class="panel-head">
+              <h3>قصص الأنبياء والمرسلين</h3>
+            </div>
+            <div id="stories-list" class="card-list"></div>
+          </div>
+        </section>
+
+        <section id="lectures" class="tab-section hidden">
+          <div class="panel toolbar-panel">
+            <div class="panel-head">
+              <h3>المحاضرات العلمية</h3>
+            </div>
+            <div id="lectures-list" class="card-list"></div>
+          </div>
+        </section>
+
+        <section id="library" class="tab-section hidden">
+          <div class="panel toolbar-panel">
+            <div class="panel-head">
+              <h3>المكتبة الواسعة</h3>
+            </div>
+            <div id="library-list" class="card-list"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div id="toast" class="toast" aria-live="polite"></div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
